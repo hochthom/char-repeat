@@ -5,7 +5,7 @@ Example:
 --------
 Create a mask first:
 ```
-%run create_mask.py NaN Source_Code_Pro/Source_Code_Pro-Black.ttf
+%run create_mask.py -s 40 NaN Source_Code_Pro/Source_Code_Pro-Black.ttf
 ```
 Create the image with:
 ```
@@ -13,5 +13,7 @@ Create the image with:
 ```
 
 ![Generated Image](https://cdn.rawgit.com/hochthom/char-repeat/master/example/img_NaN.png)
+
+The **Source_Code_Pro** font can be found ![here](https://www.google.com/fonts).
 
 Have fun!
