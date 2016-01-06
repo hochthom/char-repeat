@@ -12,7 +12,7 @@ Create the image with:
 %run create_image.py -s 16 mask_NaN.png Source_Code_Pro/Source_Code_Pro-Black.ttf
 ```
 
-![Generated Image](https://github.com/hochthom/char-repeat/raw/master/example/img_NaN.png)
+![Generated Image](https://raw.githubusercontent.com/hochthom/char-repeat/master/examples/img_NaN.png)
 
 The **Source_Code_Pro** font can be found [here](https://www.google.com/fonts).
 
