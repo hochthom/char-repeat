@@ -10,13 +10,19 @@ from create_mask import create_mask
 
 
 def draw_text(draw, mask, txt, font, ignore=None):
+    single_chn = mask.getpixel((0,0)) == type(int)
     cc = 0
     for i in range(mask.size[1]):
         for j in range(mask.size[0]):
-            r,g,b = mask.getpixel((j,i))
-            if ignore is not None and (r,g,b) == ignore:
+            val = mask.getpixel((j,i))
+            if ignore is not None and val == ignore:
                 continue
-            draw.text((dx*j, dy*i), txt[cc], font=font, fill=(r,g,b,255))
+            if single_chn:
+                draw.text((dx*j, dy*i), txt[cc], font=font, fill=(val,val,val,255))
+            elif len(val) == 3:
+                draw.text((dx*j, dy*i), txt[cc], font=font, fill=(val[0],val[1],val[2],255))
+            else:
+                draw.text((dx*j, dy*i), txt[cc], font=font, fill=val)
             cc += 1
     return cc
 
